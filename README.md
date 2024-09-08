@@ -10,7 +10,11 @@ S'assurez que les modifications apportées aux articles depuis l'application mob
 
 ## Installation des packages et initialisation du projet
   I. Back end (Django & DRF)
-  
+  Installation de django-environ: pip install django-environ
+
+ignorer les variables d'environnement avec .gitignore
+    
+
 1. Installation Django & DRF : " pip install django " ; " pip install djangorestframework "
 2. Création du projet Django : " django-admin startproject BlogAFN_2k24 . "
 3. Création de l'application Django : " django-admin startapp BlogAFN "
