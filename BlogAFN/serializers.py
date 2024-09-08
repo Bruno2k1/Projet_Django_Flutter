@@ -1,7 +1,7 @@
 from .models import Article
 from rest_framework import serializers
 
-class ArticleSerializer(serializers.HyperlinkedModelSerializer):
+class ArticleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fields = "__all__"
+        fields = ("title", "content", "author", "created_at", "updated_at")

@@ -63,7 +63,14 @@ Suivi d'une migration :  python manage.py migrate
 Connexion au compte administrateur puis création d'un nouvel utilisateur
 
 #Utilisation de JWT
+Installation JWT : pip install djangorestframework_simplejwt
 
+## Inscription d’un user 
+ Creation de l'application "jwauth": python manage.py startapp jwtauth
+
+Test de l'api d'authentification via Postman :  http://localhost:8000/api/jwtauth/register/
+
+Documentation des API avec Swagger : pip install django-rest-swagger
 
 ## Structure du Projet
 lancement du serveur : python manage.py runserver

@@ -44,7 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BlogAFN',
-    'rest_framework'
+    'rest_framework',
+    'rest_framework_simplejwt',
+    'rest_framework_swagger',
+    'jwtauth',
 ]
 
 REST_FRAMEWORK = {
@@ -52,9 +55,13 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 REST_FRAMEWORK = {
-    "DEFAULT_PERMISSION_CLASSES":
-        ["rest_framework.permissions.IsAuthenticated",], # changed
+    "DEFAULT_PERMISSION_CLASSES":["rest_framework.permissions.IsAuthenticated",],
     "DEFAULT_PARSER_CLASSES":["rest_framework.parsers.JSONParser",],
+    "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ],
 }
 
 MIDDLEWARE = [
